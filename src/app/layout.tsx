@@ -26,20 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <AuthProvider>
-     <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
+        <AuthProvider>
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          ></ThemeProvider>
-        {children}
+          >
+            {children}
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
-   </AuthProvider>
   );
 }

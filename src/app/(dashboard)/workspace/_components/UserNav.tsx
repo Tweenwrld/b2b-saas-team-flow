@@ -10,7 +10,7 @@ import { CreditCard, LogOut, User } from "lucide-react";
 
 
 const user = {
-    picture: "/public/kite-cleaning-mouth-pic.jpeg",
+    picture: "/kite-cleaning-mouth-pic.jpeg",
     given_name: "Leonard Boma",
 };
 
@@ -41,7 +41,7 @@ export function UserNav() {
                 sideOffset={8}
                 className="w-[200px]"
             >
-                <DropdownMenuLabel className="font-normal flex items-center gap-2 px-1 py1.5 text-left text-sm">
+                <DropdownMenuLabel className="font-normal flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                     <Avatar className="relative size-8 rounded-lg">
                         <AvatarImage 
                             src={user.picture} 

@@ -10,7 +10,7 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { workspaceSchema } from "@/app/schemas/worspace";
+import { workspaceSchema } from "@/app/schemas/workspace";
 
 
 export function CreateWorkspace() {

@@ -1,3 +1,4 @@
+import "@/lib/orpc.server"; // prerendering for server-side rendering
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";

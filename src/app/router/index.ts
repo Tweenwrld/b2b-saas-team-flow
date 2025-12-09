@@ -1,7 +1,8 @@
-import { listWorkspaces } from "./workspace";
+import { createWorkspaces, listWorkspaces } from "./workspace";
 
 export const router = {
     workspace: {
-        list: listWorkspaces
-    }
+        list: listWorkspaces,
+        create: createWorkspaces
+    },
 }

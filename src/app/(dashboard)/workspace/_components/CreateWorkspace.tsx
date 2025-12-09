@@ -98,7 +98,7 @@ export function CreateWorkspace() {
                         />
 
                         <Button disabled={createWorkspaceMutation.isPending} type="submit">
-                            {createWorkspaceMutation.isPending ? 'Creating...' : 'Creating Workspace'}
+                            {createWorkspaceMutation.isPending ? 'Creating...' : 'Create Workspace'}
                         </Button>
                     </form>
                 </Form>

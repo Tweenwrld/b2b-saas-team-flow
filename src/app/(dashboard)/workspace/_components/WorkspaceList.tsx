@@ -55,7 +55,7 @@ export function WorkspaceList() {
                 </LoginLink>
               </TooltipTrigger>
               <TooltipContent side='right'>
-                <p>{ws.name} {isActive && "{Current}"}{" "}</p>
+                <p>{ws.name}{isActive && " (Current)"}</p>
               </TooltipContent>
             </Tooltip>
           )

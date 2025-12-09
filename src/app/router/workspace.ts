@@ -54,7 +54,6 @@ export const listWorkspaces = base
 
 export const createWorkspaces = base
 .use(requiredAuthMiddleware)
-.use(requiredWorkspaceMiddleware)
 .route({
     method: "POST",
     path: "/workspace",
@@ -79,8 +78,11 @@ export const createWorkspaces = base
                 name: input.name,
             }
         })
-    } catch {
-        throw errors.FORBIDDEN();
+    } catch (error) {
+        console.error('Failed to create organization:', error);
+        throw errors.FORBIDDEN({
+            message: `Failed to create organization: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        });
     }
 
     if (!data.organization?.code) {
@@ -101,8 +103,11 @@ export const createWorkspaces = base
                 ],
             },
         });
-    } catch  {
-        throw errors.FORBIDDEN();
+    } catch (error) {
+        console.error('Failed to add user to organization:', error);
+        throw errors.FORBIDDEN({
+            message: `Failed to add user to organization: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        });
     }
 
     const { refreshTokens } = getKindeServerSession();

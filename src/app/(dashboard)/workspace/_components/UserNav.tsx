@@ -29,7 +29,7 @@ export function UserNav() {
                 >
                     <Avatar>
                         <AvatarImage 
-                            src={getAvatar(user.picture, user.email!)} 
+                            src={getAvatar(user.picture, user.email ?? '')} 
                             alt="User Image"
                             className="object-cover"    
                         />
@@ -48,7 +48,7 @@ export function UserNav() {
                 <DropdownMenuLabel className="font-normal flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                     <Avatar className="relative size-8 rounded-lg">
                         <AvatarImage 
-                            src={getAvatar(user.picture, user.email!)} 
+                            src={getAvatar(user.picture, user.email ?? '')} 
                             alt="User Image"
                             className="object-cover"    
                         />
